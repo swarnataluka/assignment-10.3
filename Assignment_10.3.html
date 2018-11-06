@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inheritance</title>
+</head>
+
+<body>
+    <script>
+        class Dog {
+            constructor(name) {
+                this.name = name;
+            }
+
+            speak() {
+                return "woof";
+            }
+
+        }
+
+        class Labrador extends Dog {
+            constructor(name, color, breedWeight) {
+                super(name);
+                this.color = color;
+                this.breedWeight = breedWeight;
+            }
+
+            speak() {
+                return "Labrador says woof";
+            }
+        }
+
+        var l1 = new Labrador('jimmy tiger', 'black', 10);
+        var l1 = new Labrador('hulk', 'brown', 20);
+        console.log(l1.speak());
+        console.log(l1.name);
+        console.log(l1.color);
+        console.log(l1.breedWeight);
+        console.log(l2.speak());
+        console.log(l2.name);
+        console.log(l2.color);
+        console.log(l2.breedWeight);
+    </script>
+</body>
+
+</html>
